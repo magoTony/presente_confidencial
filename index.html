@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Presente confidencial</title>
+
+  <link rel="icon" href="heart.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- 
+  <div class="container" id="giftQuestion">
+    <p class="message">Tenho um presente para você! Deseja abri-lo?</p>
+    <div class="buttons-container">
+      <button class="button" id="yesButton">Sim</button>
+      <button class="button" id="noButton">Não</button>
+    </div>
+  </div>
+   -->
+
+  <!-- Dialog Gift -->
+  <div class="dialog" id="dialogGift">
+    <h2>Este é um presente confidencial e exclusivo, tem certeza que deseja abri-lo?</h2>
+    <div class="buttons-container">
+      <button class="button" id="yesButton">Sim</button>
+      <button class="button" id="noButton">Não</button>
+    </div>
+    <div class="error-message" id="dialogGiftError">Tem certeza? Vamos tentar novamente! 😊</div>
+  </div>
+
+  <!-- Dialog Gift Confirmation -->
+  <div class="dialog" id="dialogGiftConfirmation">
+    <h2>Espere um pouco; antes de abrir, preciso de algumas informações!</h2>
+    <div class="buttons-container">
+      <button class="button" id="okButtonGiftConfirmation">Ok</button>
+    </div>
+  </div>
+
+  <div class="dialog" id="dialogNameConfirmation">
+    <h2>Seu nome é Marianne Sousa?</h2>
+    <div class="buttons-container">
+      <button class="button" id="yesButtonNameConfirmation">Sim</button>
+      <button class="button" id="noButtonNameConfirmation">Não</button>
+    </div>
+    <div class="error-message" id="dialogNameConfirmationError">Tem certeza? Vamos tentar novamente! 😊</div>
+  </div>
+
+  <div class="dialog" id="dialogNameConfirmation2">
+    <h2>Tem certeza que seu nome é Marianne Sousa?</h2>
+    <div class="buttons-container">
+      <button class="button" id="yesButtonNameConfirmation2">Sim</button>
+      <button class="button" id="noButtonNameConfirmation2">Não</button>
+    </div>
+    <div class="error-message" id="dialogNameConfirmation2Error">Tem certeza? Vamos tentar novamente! 😊</div>
+  </div>
+
+  <div class="form-dialog" id="formDialog1">
+    <h2>Se você é realmente ela, preencha o pequeno formulário de 27 páginas abaixo!</h2>
+    <div class="form-group">
+      <label for="firstName">Primeiro nome:</label>
+      <input type="text" id="firstName" name="firstName" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="middleName">Segundo nome:</label>
+      <input type="text" id="middleName" name="middleName" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="age">Idade:</label>
+      <input type="number" id="age" name="age" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="beauty">Nível de beleza (de 0 a 10):</label>
+      <input type="text" id="beauty" name="beauty" autocomplete="off">
+    </div>
+    <button class="button" id="nextPage1">Próxima página</button>
+    <div class="error-message" id="formDialog1FirstNameError">
+      Você errou o seu primeiro nome!<br>Você é realmente ela?
+    </div>
+    <div class="error-message" id="formDialog1MiddleNameError">
+      Você errou o seu segundo nome!<br>Você é realmente ela?
+    </div>
+    <div class="error-message" id="formDialog1AgeError">
+      Você errou a sua idade!<br>Você é realmente ela?
+    </div>
+    <div class="error-message" id="formDialog1beautyError">
+      Só isso de beleza? Isso tá errado!<br>Pode deixar que eu arrumo para você!
+    </div>
+  </div>
+
+  <div class="form-dialog" id="formDialog2">
+    <h2>Brincadeira, são só 2 páginas!<br>Mas, ainda não estou convencido de que você é realmente a Marianne. Preencha
+      mais essa página!</h2>
+    <div class="form-group">
+      <label for="fullName">Nome completo:</label>
+      <input type="text" id="fullName" name="fullName" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="boyfriendName">Primeiro nome do seu namorado:</label>
+      <input type="text" id="boyfriendName" name="boyfriendName" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="boyfriendAge">Idade dele:</label>
+      <input type="number" id="boyfriendAge" name="boyfriendAge" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label for="wantGift">Você quer mesmo abrir esse presente?</label>
+      <input type="text" id="wantGift" name="wantGift" autocomplete="off">
+    </div>
+    <div class="error-message" id="formDialog2fullNameError">
+      Você errou o seu nome completo!<br>Você é realmente ela?
+    </div>
+    <div class="error-message" id="formDialog2BoyfriendNameError">Você errou o nome dele!<br>Você é realmente ela?</div>
+    <div class="error-message" id="ageError">Você errou a idade dele!<br>Você é realmente ela?</div>
+    <div class="error-message" id="formDialog2WantGiftError">Escreva sim ou não!!!</div>
+    <div class="error-message" id="formDialog2WantGiftError2">Como assim você digitou "NÃO"???<br>Você não quer abrir o
+      presente?</div>
+    <button class="button" id="nextPage2">Próxima página</button>
+  </div>
+
+  <div class="dialog" id="dialogConfidentialGift">
+    <p>Feliz um mês de namoro, amor!<br>
+      Pode parecer pouco tempo pra muita gente, mas pra mim, é como se minha vida tivesse ganhado um novo sentido desde
+      que você chegou.<br>
+      Meu dia pode estar sendo péssimo, mas só de conversar com você — ou até mesmo só de pensar em você —, já melhora e
+      muito o meu dia.<br>
+      Já perdi as contas de quantos sorrisos você já arrancou de mim só de estar nos meus pensamentos.<br>
+      Você é minha primeira namorada, e mais do que isso… é a primeira pessoa que despertou em mim um amor tão
+      verdadeiro, tão forte, que eu nem sabia que existia. Cada momento contigo me mostra o quanto vale a pena acreditar
+      no amor, me mostra que tudo que vivi antes foi só pra me preparar pra te encontrar.<br>
+      Eu sou completamente apaixonado por você, de um jeito que não dá pra explicar com palavras. Só sei que quando olho
+      pra você, eu vejo meu presente, meu futuro, e tudo o que eu quero construir. Que esse seja só o começo da nossa
+      história. Porque eu quero que você seja meu primeiro e meu último amor. <br>
+      Te amo, mais do que você pode imaginar.</p>
+    <!--  
+    <div class="buttons-container">
+      <button class="button" id="yesButtonNameConfirmation2">Sim</button>
+      <button class="button" id="noButtonNameConfirmation2">Não</button>
+    </div>
+    -->
+  </div>
+
+  <div class="envelope-container" id="envelopeContainer">
+    <div class="envelope">
+      <div class="envelope-back"></div>
+      <div class="envelope-body">
+        <div class="triangle-background"></div>
+        <div class="triangle triangle-left"></div>
+        <div class="triangle triangle-right"></div>
+        <div class="triangle triangle-bottom"></div>
+        <div class="letter" id="letter">Eu te amo!</div>
+        <div class="triangle triangle-top" id="envelopeTop"></div>
+        <div class="triangle triangle-top-outline"></div>
+      </div>
+    </div>
+    <button class="button" id="toggleEnvelope">Abrir Envelope</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
